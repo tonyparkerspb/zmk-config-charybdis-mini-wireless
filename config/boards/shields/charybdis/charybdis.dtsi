@@ -3,13 +3,9 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-    }; 
-
-    vbatt: vbatt {
-	compatible = "zmk,battery-nrf-vddh";
+        zmk,matrix_transform = &five_column_transform;
     };
-          
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
