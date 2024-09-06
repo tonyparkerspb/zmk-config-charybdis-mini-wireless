@@ -46,7 +46,7 @@
 
         left_shift {
             bindings = <&hold_sticky_key LEFT_SHIFT LEFT_SHIFT>;
-            key-positions = <27 28 22 23>;
+            key-positions = <22 23>;
             layers = <0 1>;
         };
 
@@ -286,7 +286,7 @@
   &kp Q                   &kp W  &kp E                          &kp R                      &kp T                           &kp Y                         &kp U                &kp I      &kp O                &kp P
   &hold_tap LEFT_SHIFT A  &kp S  &kp D                          &kp F                      &kp G                           &kp H                         &kp J                &kp K      &kp L                &hold_tap RIGHT_SHIFT SEMICOLON
   &kp Z                   &kp X  &kp C                          &kp V                      &kp B                           &kp N                         &kp M                &kp COMMA  &layer_tap 8 PERIOD  &layer_tap 7 SLASH
-                                 &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 0 0  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE
+                                 &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 2 2  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE
             >;
         };
 
