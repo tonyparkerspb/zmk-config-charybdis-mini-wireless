@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include "charybdis.dtsi"
 
 &default_transform {
