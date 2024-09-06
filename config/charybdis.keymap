@@ -10,6 +10,7 @@
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 };
+
 &sk { quick-release; };
 
 / {
@@ -18,144 +19,87 @@
 
         right_shift {
             bindings = <&hold_sticky_key RIGHT_SHIFT RIGHT_SHIFT>;
-            key-positions = <31 32>;
-            layers = <0 1 2>;
+            key-positions = <22 23>;
+            layers = <0 1>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <15 16>;
+            key-positions = <13 12>;
             layers = <0 1>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
         };
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <21 20>;
+            key-positions = <18 17>;
         };
 
         reset_layers {
             bindings = <&to 0>;
-            key-positions = <1 10>;
+            key-positions = <0 9>;
         };
 
         left_shift {
             bindings = <&hold_sticky_key LEFT_SHIFT LEFT_SHIFT>;
-            key-positions = <27 28>;
-            layers = <0 1 2>;
+            key-positions = <27 28 22 23>;
+            layers = <0 1>;
         };
 
         shift_alt {
             bindings = <&hold_sticky_key LS(LEFT_ALT) LS(LEFT_ALT)>;
-            key-positions = <14 15>;
-            layers = <0 1 2>;
+            key-positions = <10 11>;
+            layers = <0 1>;
         };
 
         ctrl_alt {
             bindings = <&hold_sticky_key LC(LEFT_ALT) LC(LEFT_ALT)>;
-            key-positions = <26 27>;
-            layers = <0 1 2>;
+            key-positions = <20 21>;
+            layers = <0 1>;
         };
 
         shift_cmd {
             bindings = <&hold_sticky_key LS(LCMD) LS(LCMD)>;
-            key-positions = <13 15>;
-            layers = <0 1 2>;
+            key-positions = <11 12>;
+            layers = <0 1>;
         };
 
         ctrl_cmd {
             bindings = <&hold_sticky_key LC(LCMD) LC(LCMD)>;
-            key-positions = <25 27>;
-            layers = <0 1 2>;
+            key-positions = <21 22>;
+            layers = <0 1>;
         };
 
         shift_alt_cmd {
             bindings = <&hold_sticky_key LS(LA(LCMD)) LS(LA(LCMD))>;
-            key-positions = <13 14 15>;
-            layers = <0 1 2>;
+            key-positions = <10 11 12>;
+            layers = <0 1>;
         };
 
         ctrl_alt_cmd {
             bindings = <&hold_sticky_key LC(LA(LCMD)) LA(LC(LCMD))>;
-            key-positions = <25 27 26>;
-            layers = <0 1 2>;
+            key-positions = <20 21 22>;
+            layers = <0 1>;
         };
 
         meta {
             bindings = <&hold_sticky_key LS(LA(LC(LEFT_GUI))) LS(LA(LC(LEFT_GUI)))>;
-            key-positions = <13 14 15 16>;
-            layers = <0 1 2>;
+            key-positions = <13 10 11 12>;
+            layers = <0 1>;
         };
 
         left_gui_space {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <37 38>;
+            key-positions = <37 38 31 32>;
         };
 
         cmd_alt {
             bindings = <&kp LA(LCMD)>;
-            key-positions = <26 28 27>;
-        };
-
-        bluetooth_select {
-            bindings = <&sl 5>;
-            key-positions = <25 37>;
-            slow-release;
-            layers = <0>;
-        };
-
-        to_left_numbers {
-            bindings = <&sl 9>;
-            key-positions = <37 26>;
-            slow-release;
-            layers = <0>;
-        };
-
-        left_arrows_select {
-            bindings = <&sl 10>;
-            key-positions = <37 27>;
-            slow-release;
-            layers = <0>;
-        };
-
-        ctrl_arrows_left_layer {
-            bindings = <&sl 12>;
-            key-positions = <37 28>;
-            slow-release;
-            layers = <0>;
-        };
-
-        left_functions_layer {
-            bindings = <&sl 11>;
-            key-positions = <37 29>;
-            slow-release;
-            layers = <0>;
-        };
-
-        ctrl_shift {
-            bindings = <&kp LC(LEFT_SHIFT)>;
-            key-positions = <26 25>;
-        };
-
-        left_backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <15 16>;
-            layers = <15>;
-        };
-
-        left_delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 14>;
-            layers = <15>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <9 10>;
+            key-positions = <30 32>;
         };
     };
 
@@ -339,154 +283,82 @@
 
         base {
             bindings = <
-  &kp Q  &kp W  &kp E                          &kp R                        &kp T                           &kp Y                         &kp U                &kp I                            &kp O       &kp P
-  &kp A  &kp S  &kp D                          &kp F                        &kp G                           &kp H                         &kp J                &kp K                            &kp L       &kp SEMICOLON
-  &kp Z  &kp X  &kp C                          &kp V                        &kp B                           &kp N                         &kp M                &kp COMMA                        &kp PERIOD  &kp SLASH
-                     &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 15 15  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE  &hold_sticky_layer LEFT_SHIFT 3
+  &kp Q                   &kp W  &kp E                          &kp R                      &kp T                           &kp Y                         &kp U                &kp I      &kp O       &kp P
+  &hold_tap LEFT_SHIFT A  &kp S  &kp D                          &kp F                      &kp G                           &kp H                         &kp J                &kp K      &kp L       &hold_tap RIGHT_SHIFT SEMICOLON
+  &kp Z                   &kp X  &kp C                          &kp V                      &kp B                           &kp N                         &kp M                &kp COMMA  &kp PERIOD  &kp SLASH
+                                 &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 0 0  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE
             >;
         };
 
         navigation {
             bindings = <
-  &kp N1            &kp N2             &kp N3           &kp N4          &kp N5              &kp N6    &kp N7     &kp N8     &kp N9     &kp N0    
-  &caps_word        &kp LC(N9)         &kp LC(N8)       &kp LC(N7)      &kp PG_UP           &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans    
-  &kp LEFT_CONTROL  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LC(A)       &kp PAGE_DOWN       &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  
-                                             &trans           &kp LEFT_SHIFT  &kp LEFT_COMMAND    &trans    &trans     &trans
+  &kp N1            &kp N2             &kp N3           &kp N4          &kp N5              &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+  &caps_word        &kp LC(N9)         &kp LC(N8)       &kp LC(N7)      &kp PG_UP           &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+  &kp LEFT_CONTROL  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LC(A)       &kp PAGE_DOWN       &trans    &trans    &trans  &trans     &trans
+                                       &trans           &kp LEFT_SHIFT  &kp LEFT_COMMAND    &trans    &trans
             >;
         };
 
-        left {
+        symbols {
             bindings = <
-  &kp Y  &kp U  &kp I       &kp O                      &kp P                           &mkp MB4   &trans  &trans     &trans     &trans     
-  &kp H  &kp J  &kp K       &kp L                      &kp SEMICOLON                   &mkp MCLK  &trans  &mkp LCLK  &mkp RCLK  &mkp MCLK  
-  &kp N  &kp M  &kp COMMA   &kp PERIOD                 &kp SLASH                       &trans     &trans  &trans     &trans     &trans     
-                      &kp ESCAPE  &hold_or_sticky_layer 9 9  &hold_tap LEFT_CONTROL ENTER    &trans     &trans  
+  &trans       &trans       &kp PIPE       &kp LESS_THAN  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp BACKSLASH  &trans     &trans
+  &kp EXCL     &kp AT_SIGN  &kp HASH       &kp DOLLAR     &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp MINUS         &kp EQUAL      &kp GRAVE  &kp SQT
+  &kp PERCENT  &kp CARET    &kp AMPERSAND  &kp ASTERISK   &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp UNDERSCORE    &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES
+                            &trans         &trans         &trans                  &kp LEFT_CONTROL       &kp RIGHT_SHIFT
             >;
         };
 
         functions {
             bindings = <
-  &kp F1  &kp F2           &kp F3             &kp F4  &kp F5    &kp F6          &kp F7            &kp F8      &kp F9   &kp F10  
-  &trans  &trans           &trans             &trans  &task     &trans          &kp C_MUTE        &trans      &kp F11  &kp F12  
-  &trans  &trans           &trans             &trans  &arrow    &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &sl 5    &to 6    
-                                 &sl 4              &trans  &trans    &trans          &trans            
+  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6          &kp F7            &kp F8      &kp F9   &kp F10
+  &trans  &trans  &trans  &trans  &task     &trans          &kp C_MUTE        &trans      &kp F11  &kp F12
+  &trans  &trans  &trans  &trans  &arrow    &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &sl 5    &trans
+                  &sl 4   &trans  &trans    &trans          &trans
             >;
         };
 
         combos {
             bindings = <
-  &kp LS(LA(LC(LG(K))))  &kp LS(LC(LA(LG(O))))  &kp LS(LA(LG(LC(L))))  &kp LS(LA(LC(LG(P))))  &trans    &trans  &trans         &trans        &trans  &trans  
-  &trans                 &kp F11                &kp LC(UP_ARROW)       &kp LA(LG(A))          &trans    &trans  &trans         &trans        &trans  &trans  
-  &sl 8                  &trans                 &trans                 &trans                 &trans    &trans  &toggle_start  &toggle_stop  &trans  &sl 8   
-                                                      &trans                 &trans                 &trans    &trans  &trans         
+  &kp LS(LA(LC(LG(K))))  &kp LS(LC(LA(LG(O))))  &kp LS(LA(LG(LC(L))))  &kp LS(LA(LC(LG(P))))  &trans    &trans  &trans         &trans        &trans  &trans
+  &trans                 &kp F11                &kp LC(UP_ARROW)       &kp LA(LG(A))          &trans    &trans  &trans         &trans        &trans  &trans
+  &sl 6                  &trans                 &trans                 &trans                 &trans    &trans  &toggle_start  &toggle_stop  &trans  &sl 6
+                                                &trans                 &trans                 &trans    &trans  &trans
             >;
         };
 
         bluetooth {
             bindings = <
-  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &bt BT_SEL 5   &bt BT_SEL 6   &bt BT_SEL 7   &bt BT_SEL 8   &bt BT_SEL 9   
-  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &bt BT_DISC 5  &bt BT_DISC 6  &bt BT_DISC 7  &bt BT_DISC 8  &bt BT_DISC 9  
-  &to 6          &sl 13         &trans         &bt BT_CLR_ALL  &bt BT_CLR       &out OUT_BLE   &out OUT_USB   &trans         &trans         &trans         
-                                      &trans         &trans          &trans           &trans         &trans         
-            >;
-        };
-
-        game {
-            bindings = <
-  &kp TAB         &kp Q  &kp W         &kp E      &kp R    &trans  &trans  &trans  &trans  &trans  
-  &kp LEFT_SHIFT  &kp A  &kp S         &kp D      &kp F    &trans  &trans  &trans  &trans  &trans  
-  &kp LCTRL       &kp Z  &kp X         &kp C      &kp V    &trans  &trans  &trans  &trans  &trans  
-                               &kp LEFT_ALT  &kp SPACE  &mo 7    &trans  &trans  
-            >;
-        };
-
-        game2 {
-            bindings = <
-  &kp ESCAPE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &trans  &trans  &trans  &trans  &trans  
-  &kp ENTER   &kp Y         &kp T         &kp I         &kp G           &trans  &trans  &trans  &trans  &trans  
-  &trans      &kp H         &kp L         &kp M         &kp B           &trans  &trans  &trans  &trans  &trans  
-                                  &trans        &trans        &trans          &trans  &trans  
+  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &bt BT_SEL 5   &bt BT_SEL 6   &bt BT_SEL 7   &bt BT_SEL 8   &bt BT_SEL 9
+  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &bt BT_DISC 5  &bt BT_DISC 6  &bt BT_DISC 7  &bt BT_DISC 8  &bt BT_DISC 9
+  &to 0          &sl 0          &trans         &bt BT_CLR_ALL  &bt BT_CLR       &out OUT_BLE   &out OUT_USB   &trans         &trans         &trans
+                                &trans         &trans          &trans           &trans         &trans
             >;
         };
 
         danger {
             bindings = <
-  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       
-  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       
-  &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  
-                             &trans  &trans  &trans    &trans  &trans  
-            >;
-        };
-
-        left_hand_additional {
-            bindings = <
-  &kp LC(A)  &kp N7        &kp N8        &kp N9        &kp LC(N9)    &trans  &trans  &trans  &trans  &trans  
-  &kp DOT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LC(N8)    &trans  &trans  &trans  &trans  &trans  
-  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(N7)    &trans  &trans  &trans  &trans  &trans  
-                                 &sl 11        &sl 10        &trans        &trans  &trans  
-            >;
-        };
-
-        left_hand_additional_2 {
-            bindings = <
-  &trans    &trans    &trans        &trans     &trans               &trans  &trans  &trans  &trans  &trans  
-  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp C_VOLUME_UP      &trans  &trans  &trans  &trans  &trans  
-  &trans    &trans    &trans        &trans     &kp C_VOLUME_DOWN    &trans  &trans  &trans  &trans  &trans  
-                            &trans        &trans     &trans               &trans  &trans  
-            >;
-        };
-
-        left_hand_additional_3 {
-            bindings = <
-  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &trans  &trans  &trans  &trans  &trans  
-  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10    &trans  &trans  &trans  &trans  &trans  
-  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &trans  &trans  &trans  &trans  &trans  
-                          &trans   &trans   &trans     &trans  &trans  
-            >;
-        };
-
-        left_hand_additional_4 {
-            bindings = <
-  &trans        &trans        &trans            &trans         &trans    &trans  &trans  &trans  &trans  &trans  
-  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans    &trans  &trans  &trans  &trans  &trans  
-  &trans        &trans        &trans            &trans         &trans    &trans  &trans  &trans  &trans  &trans  
-                                    &trans            &trans         &trans    &trans  &trans  
-            >;
-        };
-
-        bluetooth_left {
-            bindings = <
-  &bt BT_SEL 5   &bt BT_SEL 6   &bt BT_SEL 7   &bt BT_SEL 8    &bt BT_SEL 9     &trans  &trans  &trans  &trans  &trans  
-  &bt BT_DISC 5  &bt BT_DISC 6  &bt BT_DISC 7  &bt BT_DISC 8   &bt BT_DISC 9    &trans  &trans  &trans  &trans  &trans  
-  &trans         &out OUT_USB   &out OUT_BLE   &bt BT_CLR_ALL  &bt BT_CLR       &trans  &trans  &trans  &trans  &trans  
-                                      &trans         &trans          &trans           &trans  &trans  
+  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader
+                       &trans  &trans  &trans    &trans  &trans
             >;
         };
 
         mouse {
             bindings = <
-  &kp LS(LC(H))  &kp LS(LG(L))  &trans        &trans     &trans    &trans  &trans  &trans  &trans  &trans  
-  &kp LS(LG(K))  &trans         &kp LEFT_GUI  &mkp MB4   &trans    &trans  &trans  &trans  &trans  &trans  
-  &kp LS(LG(J))  &mkp RCLK      &mkp MCLK     &mkp LCLK  &trans    &trans  &trans  &trans  &trans  &trans  
-                                      &trans        &trans     &trans    &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB2   &mo 8   &trans
+                  &trans  &trans  &trans    &trans  &trans
             >;
         };
 
-        left_alt {
+        scroll {
             bindings = <
-  &trans       &trans       &kp PIPE       &kp LESS_THAN  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp BACKSLASH  &trans     &trans             
-  &kp EXCL     &kp AT_SIGN  &kp HASH       &kp DOLLAR     &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp MINUS         &kp EQUAL      &kp GRAVE  &kp SQT            
-  &kp PERCENT  &kp CARET    &kp AMPERSAND  &kp ASTERISK   &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp UNDERSCORE    &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  
-                                  &trans         &trans         &trans                  &kp LEFT_CONTROL       &kp RIGHT_SHIFT   
-            >;
-        };
-
-        test {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  
-  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  
-  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  
-                        &trans  &trans  &kp LCMD    &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB2   &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans
             >;
         };
     };
