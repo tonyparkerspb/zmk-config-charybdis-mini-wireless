@@ -294,7 +294,7 @@
             bindings = <
   &kp N1            &kp N2             &kp N3           &kp N4          &kp N5              &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
   &caps_word        &kp LC(N9)         &kp LC(N8)       &kp LC(N7)      &kp PG_UP           &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-  &kp LEFT_CONTROL  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LC(A)       &kp PAGE_DOWN       &trans    &trans    &trans  &trans     &trans
+  &kp LEFT_CONTROL  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LC(A)       &kp PAGE_DOWN       &mmv SCROLL_LEFT    &mmv SCROLL_DOWN    &mmv SCROLL_UP  &mmv SCROLL_RIGHT     &trans
                                        &trans           &kp LEFT_SHIFT  &kp LEFT_COMMAND    &trans    &trans
             >;
         };
