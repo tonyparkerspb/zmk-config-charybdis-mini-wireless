@@ -11,6 +11,13 @@
     chosen { zmk,matrix_transform = &five_column_transform; };
 };
 
+&msc {
+    acceleration-exponent = <1>;  // 0
+    time-to-max-speed-ms = <40>;  // 300
+    delay-ms = <0>;
+    trigger-period-ms = <8>;      // 16
+};
+
 &sk { quick-release; };
 
 / {
@@ -52,24 +59,12 @@
 
         shift_alt {
             bindings = <&hold_sticky_key LS(LEFT_ALT) LS(LEFT_ALT)>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
             layers = <0 1>;
         };
 
         ctrl_alt {
             bindings = <&hold_sticky_key LC(LEFT_ALT) LC(LEFT_ALT)>;
-            key-positions = <20 21>;
-            layers = <0 1>;
-        };
-
-        shift_cmd {
-            bindings = <&hold_sticky_key LS(LCMD) LS(LCMD)>;
-            key-positions = <11 12>;
-            layers = <0 1>;
-        };
-
-        ctrl_cmd {
-            bindings = <&hold_sticky_key LC(LCMD) LC(LCMD)>;
             key-positions = <21 22>;
             layers = <0 1>;
         };
@@ -292,10 +287,10 @@
 
         navigation {
             bindings = <
-  &kp N1            &kp N2             &kp N3           &kp N4          &kp N5              &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-  &caps_word        &kp LC(N9)         &kp LC(N8)       &kp LC(N7)      &kp PG_UP           &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-  &kp LEFT_CONTROL  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LC(A)       &kp PAGE_DOWN       &msc MOVE_LEFT 5   &msc MOVE_UP 5   &msc MOVE_DOWN 5  &msc MOVE_RIGHT 5    &trans
-                                       &trans           &kp LEFT_SHIFT  &kp LEFT_COMMAND    &trans    &trans
+  &kp N1            &kp N2             &kp N3           &kp N4          &kp N5              &kp N6            &kp N7          &kp N8            &kp N9             &kp N0
+  &caps_word        &kp LC(N9)         &kp LC(N8)       &kp LC(N7)      &kp PG_UP           &kp LEFT          &kp DOWN        &kp UP            &kp RIGHT          &trans
+  &kp LEFT_CONTROL  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LC(A)       &kp PAGE_DOWN       &msc MOVE_LEFT  &msc MOVE_UP  &msc MOVE_DOWN  &msc MOVE_RIGHT  &trans
+                                       &trans           &kp LEFT_SHIFT  &kp LEFT_COMMAND    &trans            &trans
             >;
         };
 
