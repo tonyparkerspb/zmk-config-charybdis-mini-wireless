@@ -91,12 +91,12 @@
         };
 
         toggle_mouse_layer {
-            bindings = <&to_mouse_layer>;
+            bindings = <&tog 7>;
             key-positions = <26 27>;
         };
 
         toggle_scroll_layer {
-            bindings = <&to_scroll_layer>;
+            bindings = <&tog 8>;
             key-positions = <27 28>;
         };
     };
