@@ -105,14 +105,9 @@
             key-positions = <25 26>;
         };
 
-        to_base_layer_alt {
-            bindings = <&mkp MCLK>;
-            key-positions = <26 28>;
-        };
-
         to_base_layer_alt_2 {
             bindings = <&to 8>;
-            key-positions = <16 18>;
+            key-positions = <26 28>;
         };
     };
 
@@ -312,7 +307,7 @@
             bindings = <
   &kp Q                   &kp W  &kp E                          &kp R                      &kp T                           &kp Y                         &kp U                &kp I      &kp O                &kp P
   &hold_tap LEFT_SHIFT A  &kp S  &kp D                          &kp F                      &kp G                           &kp H                         &kp J                &kp K      &kp L                &hold_tap RIGHT_SHIFT SEMICOLON
-  &kp Z                   &kp X  &kp C                          &kp V                      &kp B                           &kp N                         &kp M                &kp COMMA  &layer_tap 8 PERIOD  &layer_tap 7 SLASH
+  &kp Z                   &kp X  &kp C                          &kp V                      &kp B                           &kp N                         &kp M                &kp COMMA  &layer_tap 7 PERIOD  &layer_tap 8 SLASH
                                  &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 2 2  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE
             >;
         };
@@ -375,7 +370,7 @@
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans  &trans
   &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB2   &mo 8   &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB2   &trans  &mo 8
                   &trans  &trans  &trans    &trans  &trans
             >;
         };
