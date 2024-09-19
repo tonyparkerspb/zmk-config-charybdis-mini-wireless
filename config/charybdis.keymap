@@ -298,6 +298,15 @@
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
         };
+
+        layer_mkp: layer_mkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_MKP";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
     };
 
     keymap {
@@ -368,9 +377,9 @@
 
         mouse {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB2   &trans  &mo 8
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans            &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK         &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &layer_mkp 8 MB2  &trans  &mo 8
                   &trans  &trans  &trans    &trans  &trans
             >;
         };
