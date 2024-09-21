@@ -371,7 +371,7 @@
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans            &trans  &trans
   &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK         &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &layer_mkp 8 MB2  &trans  &mo 8
+  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mo 8  &mkp MB2  &mo 8
                   &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 2 2  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE
             >;
         };
