@@ -281,6 +281,14 @@
             label = "TO_SCROLL_LAYER";
         };
 
+        double_click: double_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1>;
+            label = "DOUBLE_CLICK";
+            wait-ms = <50>;
+        };
+
         cmd_tab: cmd_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "CMD_TAB";
@@ -344,7 +352,7 @@
             bindings = <
   &kp LS(LA(LC(LG(K))))  &kp LS(LC(LA(LG(O))))  &kp LS(LA(LG(LC(L))))  &kp LS(LA(LC(LG(P))))  &trans    &trans  &trans         &trans        &trans  &trans
   &trans                 &kp F11                &kp LC(UP_ARROW)       &kp LA(LG(A))          &trans    &trans  &trans         &trans        &trans  &trans
-  &sl 6                  &trans                 &trans                 &trans                 &trans    &trans  &toggle_start  &toggle_stop  &trans  &sl 6
+  &sl 6                  &trans                 &trans                 &kp LG(F7)             &trans    &trans  &toggle_start  &toggle_stop  &trans  &sl 6
                                                 &trans                 &trans                 &trans    &trans  &trans
             >;
         };
@@ -369,18 +377,18 @@
 
         mouse {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans            &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK         &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mo 8  &mkp MB2  &mo 8
+  &trans  &trans  &trans                         &trans                     &trans                          &trans                        &trans               &trans     &trans    &trans
+  &trans  &trans  &trans                         &trans                     &trans                          &trans                        &double_click        &mkp MCLK  &trans    &trans
+  &trans  &trans  &trans                         &trans                     &trans                          &trans                        &mkp MB1             &mo 8      &mkp MB2  &trans
                   &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 2 2  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE
             >;
         };
 
         scroll {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &mkp MCLK  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB2   &trans  &trans
+  &trans  &trans  &trans                         &trans                     &trans                          &trans                        &trans               &trans     &trans  &trans
+  &trans  &trans  &trans                         &trans                     &trans                          &trans                        &trans               &mkp MCLK  &trans  &trans
+  &trans  &trans  &trans                         &trans                     &trans                          &trans                        &mkp MB1             &mkp MB2   &trans  &trans
                   &hold_sticky_layer LEFT_ALT 3  &hold_or_sticky_layer 2 2  &hold_tap LEFT_COMMAND SPACE    &hold_tap LEFT_CONTROL ENTER  &layer_tap 1 ESCAPE
             >;
         };
